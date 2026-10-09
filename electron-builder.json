@@ -1,0 +1,31 @@
+{
+  "appId": "com.aether.pdf",
+  "productName": "Aether",
+  "artifactName": "Aether.${ext}",
+  "directories": {
+    "output": "dist-package",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "msi",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "build/icon.ico"
+  },
+  "msi": {
+    "oneClick": false,
+    "perMachine": true,
+    "runAfterFinish": true,
+    "shortcutName": "Aether",
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  }
+}

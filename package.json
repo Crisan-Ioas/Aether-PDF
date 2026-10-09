@@ -1,0 +1,49 @@
+{
+  "name": "aether",
+  "productName": "Aether",
+  "version": "1.0.0",
+  "description": "Aether PDF Suite - Suită profesională completă de procesare și editare PDF offline de la CoExist Robotics",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build:vite": "vite build",
+    "build:electron": "node scripts/build-electron.mjs",
+    "build": "npm run build:vite && npm run build:electron",
+    "dist:msi": "npm run build && electron-builder --win msi",
+    "dist": "npm run build && electron-builder",
+    "start": "electron ."
+  },
+  "keywords": [
+    "pdf",
+    "editor",
+    "offline",
+    "aether"
+  ],
+  "author": "CoExist Robotics",
+  "license": "MIT",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.460.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "3.11.174",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4",
+    "tesseract.js": "^5.1.1",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "esbuild": "^0.24.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}
